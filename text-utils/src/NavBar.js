@@ -54,7 +54,7 @@ const NavBar = (props) => {
 NavBar.propTypes = {
 
     title : PropTypes.string ,
-    // title : PropTypes.string.isRequired  : Says that Title is required. Otherwise it will show an error in Console.log
+    // title : PropTypes.string.isRequired  : ".isRequired" Says that Title is required. Otherwise it will show an error in Console.log
     aboutText : PropTypes.string
 
 }
