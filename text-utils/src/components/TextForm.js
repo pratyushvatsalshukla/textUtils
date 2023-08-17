@@ -19,6 +19,12 @@ const TextForm = (props) => {
   const handleClear = (event) => {
     setText("");
   };
+  const handleExtraSpaces = () => {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
+  };
+
+  
 
   return (
     <>
@@ -26,7 +32,7 @@ const TextForm = (props) => {
         <h1>{props.heading}</h1>
         <div className="my-3 mx-3">
           <textarea
-            className="form-control"
+            className="form-control mybox"
             value={text}
             onChange={handleOnChange}
             rows="8"
@@ -45,6 +51,14 @@ const TextForm = (props) => {
         >
           Convert To LowerCase
         </button>
+
+        <button
+          className="btn btn-primary my-3 mx-3"
+          onClick={handleExtraSpaces}
+        >
+          Remove Extra Spaces
+        </button>
+
         <button className="btn btn-primary my-3 mx-3" onClick={handleClear}>
           Clear
         </button>
